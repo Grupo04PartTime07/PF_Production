@@ -1,7 +1,7 @@
 const server = require('./src/app.js');
 const { conn } = require('./src/db.js');
 const Categories = require('./src/models/Categories.js');
-import { PORT } from ('./src/config');
+const { PORT = 3001 } = process.env
 
 
 
