@@ -7,6 +7,6 @@ import { PORT } from ('./src/config');
 
 conn.sync({ alter:true }).then(() => {
   server.listen(PORT, () => {
-    console.log('** Listening at 3001**');
+    console.log(` Listening at ${PORT}`);
   });
 });
