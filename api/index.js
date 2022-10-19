@@ -1,8 +1,12 @@
 const server = require('./src/app.js');
 const { conn } = require('./src/db.js');
+const Categories = require('./src/models/Categories.js');
+import { PORT } from ('./src/config');
 
-conn.sync({ force: true }).then(() => {
-  server.listen(3001, () => {
+
+
+conn.sync({ alter:true }).then(() => {
+  server.listen(PORT, () => {
     console.log('** Listening at 3001**');
   });
 });
